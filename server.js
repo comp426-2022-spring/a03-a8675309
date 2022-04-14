@@ -92,7 +92,7 @@ function getRandomInt(max) {
     var mycall = call;
     var myflip = coinFlip();
     var myresult = 'lose';
-    if (flip == call){
+    if (myflip == call){
       myresult = 'win'
     }
   
