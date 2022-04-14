@@ -109,10 +109,7 @@ const server = app.listen(port, () => {
 });
 
 
-// Default response for any other request
-app.use(function(req, res){
-    res.status(404).send('404 NOT FOUND')
-});
+
 
 
 app.get('/app/', (req, res) => {
@@ -143,4 +140,9 @@ app.get('/app/flip/call/heads', (req,res) => {
 app.get('/app/flip/call/tails', (req,res) => {
     res.status(200).json(flipACoin('tails'))
 })
+
+// Default response for any other request
+app.use(function(req, res){
+    res.status(404).send('404 NOT FOUND')
+});
 
